@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "gothic-venture-406313",
+  "private_key_id": "b3f5ef49fd29a96b9e630ec0013b66c6d571e79f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9vK3CLuljuztn\nmGvr0W+uFDgpWIqNi8wNbOMxvMVWrmmxGevUwfjDt5I8ocSReUNa9CLCu4Dr9K48\nE+V17oY6R5j/SJPDX4A9wwdPiCpW9v2ZLR2Q/eSxuhMRFz8jD5DrPtJEFGRTW5gb\nuuyqJHi3i5xKhYsXIh/iiOz2KpgWg7SFWSGKaMyn9VIPtVFAghLeB4XSztpbK7H7\nuFvpWoAFsS9lKwIF9df41OejEesH3Ee38BUJoQjMJh/L9Oc5onraVvKMzGeLmyda\nB1E4NzpCdsALd/Lm58d4RWe84JPnkLwxEZOww1sG+oATOkfvDytNnh0ggqL0cN1z\nZ3p7rc1RAgMBAAECgf8HkXo1etrKkNmrTR9PsCOX+lQIFxiq0ai5ajcb8RgBuq5f\nDmmjobaoF+pzioo0G+wFHCQzIFFrjjSMYisYq6EvCo6K218w5vIAcP1BDG1o2Wd1\ndLTH+zFGltHTRBUx35ljUqzy7LXsYjYCvcW8yJoby9059F6mueILtf4z5zof+nt/\ny2OewfsHVm+DUwmt8xaMzmOtSlnUxr5rN0bCq4a+enNixlu/8opsfh3xM1HHpq2H\nPh8D0gcKHjs0ujwAkwnS07Abw/S6Ww23zvZrVlPJ22Z2mBgkL187XUMUYldwRXc/\n/GDaxM1S9CrIW2h5fEv6Ifqp6j3NdyIbUMom4PECgYEA/DJbNM+PpicPFpm6gkPn\naJAXD0D9i1uSpybgWpEqy9ECMZ6kxWstKoQa6aqBRKmybwpe5Q2ME6+RfS4l5F/Y\nUDIRHdpqdEf+2lYoBJHrVCY2BNaHWsGCtp5dDgQ2JI55jw2J5q0/Mtdk1LgGpfpl\nk/vFVGgx2u0rIJLeA3dmpekCgYEAwJkv+IMZKABk9XFkFMu+3Wsa9kT+aVvdjO31\nV0VH2gktPe05PmXMe6b+ZNj73k2Lz1wnt0RqrHMVzR0nxK9WaAiygAUHJRYxcjgG\nKYgfJfjG2Mgf2CYa9+92uZ7S+siFFXazOXOI6KGy0U0YrHHI4BdZo+EON7nFqMAS\nklk/gykCgYEArPKfh2zbtvbMKxSLSa/lbth5Z9WKylmnDYfkjVdGAPW5Smvf1R61\nn5Vum1V5RqwVGH8FKpEKwalB3ZWbGKz9u6lKAa36GPoSdIpm8RNcTZ3Sp6iys/NG\nf5PEfss2kgU+qXKAYjfmwifiFtqIfKRlqoEbBtJZdif0zmbJZ5knRJkCgYEAr8eg\nNqpAPXgOrMyu0SQbsS5dz0KtCC/mBwfvkZUTvPX/KrPmOQLkHD8Pk69OQVh5L+ol\n/WgeDAKFdU0UzLhSnmTBtYHhQYH94wcq6KDp/NgPdC9CkR5GIt+Vdlh0qpp0jGBn\ntxmxbNCXydsZl9nJwmzNTXrMZSPSOPAEgzmdc/ECgYEApKKnUWsP1S4tuAkVbx0E\nILOnIzHgPM6UUxYisCxOZQEqY7POIACmCYZlJdV/RzVFTQo3mQjUSBrlobt7+9Re\nxio/tOnc02tztPtIePfJH7Et+IIHykvk7N+lg0RirfKwxNcfVr1xIOQf7hxreP+v\nxicoycQ4Xc0448ybgAxXzQo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "google-analytics@gothic-venture-406313.iam.gserviceaccount.com",
+  "client_id": "107651428456104027971",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/google-analytics%40gothic-venture-406313.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
