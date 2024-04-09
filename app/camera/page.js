@@ -91,12 +91,12 @@ export default function Camera() {
       ) {
       } else {
         document.body.removeChild(videoElement);
-        router.push("/species?name=" + species.name);
+        router.push("/form?species=" + species.name);
       }
     };
     videoElement.addEventListener("ended", () => {
       document.body.removeChild(videoElement);
-      router.push("/species?name=" + species.name);
+      router.push("/form?species=" + species.name);
     });
     document.addEventListener("fullscreenchange", handleFullscreenChange);
     videoElement.addEventListener(
