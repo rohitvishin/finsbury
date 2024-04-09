@@ -48,8 +48,7 @@ export default function Thankyou() {
     >
       <p style={{ fontSize: "35px", fontWeight: "bold" }}>Thank you!</p>
       <p>
-        By making this pledge you have taken a positive step forward to a bright
-        future. now submit the form below to complete your confirmation
+      By connecting with your interspecies community and making this commitment you have contributed to the bountiful biodiversity of all our futures!
       </p>
       <form style={{ marginTop: 38 }}>
         <input type="text" onChange={(e) => setname(e.target.value)}  placeholder="First Name" name="name" />
@@ -78,7 +77,7 @@ export default function Thankyou() {
       </div>
       <p style={{marginTop:35}}>
         <h3 style={{fontWeight:600}}>Disclaimer :</h3>
-        By giving us your details you are consenting to receive a limited number of emails from the species you have pledged to support. These will be sent via Furtherfield but you will not be added to any marketing email lists at Furtherfield or Rothamsted Research. Your details will be held and deleted in compliance with GDPR. If you have any questions please contact info@furtherfield.org.
+        By giving us your details you are consenting to join our mailing list in order to receive a limited number of emails from the species you have pledged to support. Following this we may send you occasional marketing emails on our activities. Your details will be held in compliance with GDPR and you can opt out any time. If you have any questions please contact info@furtherfield.org.
       </p>
     </div>
   );
