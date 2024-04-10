@@ -187,12 +187,9 @@ export default function Camera() {
               }}
             />
             {clickIcon ? (
-              <img
-                className="connectingText"
-                ref={overlayImg1}
-                src="Connecting.gif" // Replace with the URL of your transparent image
-                alt="Overlay"
-              />
+              <p className="connectingDots" style={{ fontSize: 14 }}>
+              CONNECTING
+            </p>
             ) : (
               <p className="connectingText" style={{ fontSize: 14 }}>
                 TAP TO CONNECT

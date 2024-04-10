@@ -14,12 +14,12 @@ export default function Contact(){
         flexDirection: "column",
         alignItems: "center",
       }}>
-        <div style={{marginBottom:25,width:'340px'}}>
+        <div style={{marginBottom:25,marginTop:45,width:'340px'}}>
         <img
-        src="rothamsted/GetOnTeamFarmer1.webp"
-        style={{ height: 190, width: 200 }}
+        src="rothamsted/Text_WelcomeTo.webp"
+        style={{ height: 100, width: 350 }}
       />
-        <p>Make a pledge for your favourite species</p>
+        <p style={{padding:15}}>Make a pledge for your favourite species</p>
         </div>
         
         <div style={{maxHeight: '70%', overflowY: 'auto',padding:7}}>
