@@ -6,7 +6,7 @@ export const speciesList = {
       image: "webp/Btn_BEE.webp",
       intro: "video/species/Bee.mp4",
       pledge_line: "I will feed bees and other pollinators.",
-      pledge_link: "https://www.wildlifetrusts.org/actions/best-plants-bees-and-pollinators",
+      pledge_link: "https://ukpoms.org.uk/fit-counts",
     },
     {
       name: "BEETLE",
@@ -20,7 +20,7 @@ export const speciesList = {
       image: "webp/Btn_DOG.webp",
       intro: "video/species/Dog.mp4",
       pledge_line: "I will pick up litter on all my walks.",
-      pledge_link: "https://www.wildlifetrusts.org/actions/do-litter-pick-or-beach-clean",
+      pledge_link: "https://www.minutes.haringey.gov.uk/mgUserInfo.aspx?UID=1525",
     },
     {
       name: "GOOSE",
@@ -34,7 +34,7 @@ export const speciesList = {
       image: "webp/Btn_GRASS.webp",
       intro: "video/species/Grass.mp4",
       pledge_line: "I will scatter wildflower seeds on local grass patches.",
-      pledge_link: "https://www.plantlife.org.uk/learning-resource/managing-road-verges-and-greenspaces/#resources",
+      pledge_link: "https://www.thefriendsoffinsburypark.org.uk/ecology-plan-1",
     },
     
     {
@@ -42,7 +42,7 @@ export const speciesList = {
       image: "webp/Btn_TREE.webp",
       intro: "video/species/Tree.mp4",
       pledge_line: "I will informally adopt and care for a local tree.",
-      pledge_link: "https://www.observatree.org.uk/",
+      pledge_link: "https://www.youtube.com/watch?v=kuFNmH7lVTA",
     },
     {
       name: "SQUIRREL",
