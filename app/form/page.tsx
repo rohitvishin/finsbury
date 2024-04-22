@@ -1,12 +1,14 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 export default function Form() {
+  const [speId, setSpeId] = useState<any>(null);
   useEffect(() => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const species = urlParams.get("species");
-    console.log(species)
-  }, []);
+    setSpeId(species)
+  }, [])
+  
   return (
     <div
       style={{
@@ -21,7 +23,7 @@ export default function Form() {
     >
       <div style={{ textAlign: "center" }}>
         <p
-        onClick={()=>window.location.href='/camera'}
+        onClick={()=>window.location.href='/camera?spe_id='+speId}
           style={{
             backgroundColor:'#fff',
             borderRadius: "10px",

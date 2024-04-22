@@ -19,8 +19,10 @@ export default function Camera() {
   const [clickIcon, setClickIcon] = useState(false);
 
   useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * speciesList.data.length);
-    const randomSpecie = speciesList.data[randomIndex];
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const spec = urlParams.get("spe_id") ? parseInt(urlParams.get("spe_id")) : 0;
+    const randomSpecie = speciesList.data.find((obj) => obj.id === (spec+1));
     setSpecies(randomSpecie);
   }, []);
 
@@ -91,12 +93,12 @@ export default function Camera() {
       ) {
       } else {
         document.body.removeChild(videoElement);
-        router.push("/form?species=" + species.name);
+        router.push("/form?species=" + species.id);
       }
     };
     videoElement.addEventListener("ended", () => {
       document.body.removeChild(videoElement);
-      router.push("/form?species=" + species.name);
+      router.push("/form?species=" + species.id);
     });
     document.addEventListener("fullscreenchange", handleFullscreenChange);
     videoElement.addEventListener(

@@ -77,8 +77,13 @@ export default function Success() {
         <p style={{ fontSize: 16,height:150,overflowY: 'auto' }} onTouchStart={handleTouchStart} ref={containerRef}>
           Your one small step can bring big changes in the future!
           <br/>
-          The Treaty of Finsbury Park 2025 is based on an initial concept by Ruth Catlow and Cade Diem and co-authored by Ruth Catlow and Charlotte Frost with Bea Xu, Max Dovey, and Leky Leidecker with contributions by hundreds of players and hosts. Mentor species illustrations are by Sajan Rai, music is by Matt Catlow, and digital face filters by PopulAR. This app also includes performances by Viktor Bedö and Kate Genevieve and park sounds by loljames on freesound under a CC 3.0 license.
-          The project was developed within, and partly funded by, the CreaTures project, with embedded researchers Ann Light and Lara Houston. The Creative Practices for Transformational Futures (CreaTures) project received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 870759. The Treaty of Finsbury Park was also supported by Arts Council England, and Haringey Council.
+          The Treaty of Finsbury Park 2025 is based on an initial concept by Ruth Catlow and Cade Diem<br/> Co-authored by Ruth Catlow and Charlotte Frost with Bea Xu, Max Dovey, and Leky Leidecker with contributions by hundreds of players and hosts.<br/> Mentor species illustrations are by Sajan Rai, music is by Matt Catlow, and digital face filters by PopulAR.<br/> This app also includes performances by Viktor Bedö and Kate Genevieve and park sounds by loljames on freesound under a CC 3.0 license.<br/>
+          The project was developed within, and partly funded by, the CreaTures project, with embedded researchers Ann Light and Lara Houston.<br/> The Creative Practices for Transformational Futures (CreaTures) project received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 870759. The Treaty of Finsbury Park was also supported by Arts Council England, and Haringey Council.
+          <div style={{margin:30}}>
+            <img src="finsbury/new_design_congress.png" style={{ height: "100px"}} />
+            <img src="finsbury/haringey.png" style={{ height: "35px",marginBottom:15 }} />
+            <img src="finsbury/creatures.jpeg" style={{ height: "25px" }} />
+          </div>
         </p>
       </div>
       <p
