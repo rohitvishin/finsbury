@@ -33,7 +33,7 @@ export default function Home() {
     >
       <img
         src="finsbury/Text_Behold.png"
-        style={{ height: 265, width: 340}}
+        style={{ height: 275, width: 340}}
         alt="Dial Image"
       />
       <img

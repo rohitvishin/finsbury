@@ -22,7 +22,7 @@ export const speciesList = {
       name: "Dog",
       image: "webp/Btn_DOG.webp",
       intro: "video/species/Dog.mp4",
-      pledge_line: "ZOOPERATE: I will tell the council all park events must support all creatures",
+      pledge_line: "ZOOPERATE: I'll tell council, all park events must support all species",
       pledge_link: "https://treaty.finsburypark.live/?p=402",
     },
     {

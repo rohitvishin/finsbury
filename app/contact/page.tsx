@@ -17,7 +17,7 @@ export default function Contact(){
         <div style={{marginBottom:25,marginTop:45,width:'340px'}}>
         <img
         src="rothamsted/Text_WelcomeTo.webp"
-        style={{ height: 100, width: 350 }}
+        style={{ height: 90, width: 350 }}
       />
         <p style={{padding:15}}>Make a pledge for your favourite species</p>
         </div>
