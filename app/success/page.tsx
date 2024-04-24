@@ -76,12 +76,12 @@ export default function Success() {
         <p style={{ fontSize: 20 }}>Thank you for pledging</p>
         <p style={{ fontSize: 16,height:150,overflowY: 'auto' }} onTouchStart={handleTouchStart} ref={containerRef}>
           Your one small step can bring big changes in the future!
-          <div style={{margin: '10px 10px 15px',display: 'flex',flexDirection: 'column',justifyContent: 'center'}}>
+          <div style={{margin: '10px 10px 15px',display: 'flex',flexDirection: 'column',justifyContent: 'center',alignItems:'center'}}>
             <img src="finsbury/furtherfield.png" style={{ height: "80px"}} />
             <strong>Supported By</strong>
             <img src="finsbury/new_design_congress.png" style={{ height: "100px"}} />
             <img src="finsbury/haringey.png" style={{ height: "35px",marginBottom:15 }} />
-            <img src="finsbury/creatures.jpeg" style={{ height: "25px" }} />
+            <img src="finsbury/creatures.jpeg" style={{ height: "25px",marginTop:15 }} />
           </div>
           The Treaty of Finsbury Park 2025 is based on an initial concept by Ruth Catlow and Cade Diem
           <br/>
