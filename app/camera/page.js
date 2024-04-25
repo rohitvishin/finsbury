@@ -22,7 +22,8 @@ export default function Camera() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const spec = urlParams.get("spe_id") ? parseInt(urlParams.get("spe_id")) : 0;
-    const randomSpecie = speciesList.data.find((obj) => obj.id === (spec+1));
+    const species_id=spec>=6?0:spec; // reset to 0 after 7
+    const randomSpecie = speciesList.data.find((obj) => obj.id === (species_id+1));
     setSpecies(randomSpecie);
   }, []);
 
