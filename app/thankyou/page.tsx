@@ -9,27 +9,32 @@ export default function Thankyou() {
   const [error, setError] = useState(false);
   const [process, setProcess] = useState(false);
   const handleSubmit=async()=>{
-    var data = JSON.stringify({
+    let data = JSON.stringify({
       "collection": "users",
       "database": "sample_mflix",
       "dataSource": "Cluster0",
       "projection": {
-          "_id": 1
+        "_id": 1
       }
-  });
-   await axios.post('https://ap-south-1.aws.data.mongodb-api.com/app/data-raxlfyz/endpoint/data/v1/action/findOne', data,{
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Request-Headers': '*',
-        'Authorization':'zxteh5xGOHDaq0s5z61U7F5t8aoXMTqUcVeHtV64BT799glxIXj1vzKq2kxu6sQE',
-        'api-key': 'zxteh5xGOHDaq0s5z61U7F5t8aoXMTqUcVeHtV64BT799glxIXj1vzKq2kxu6sQE',
-      }
+    });
+    
+    let config = {
+      method: 'post',
+      maxBodyLength: Infinity,
+      url: 'https://ap-south-1.aws.data.mongodb-api.com/app/data-raxlfyz/endpoint/data/v1/action/findOne',
+      headers: { 
+        'api-key': 'zxteh5xGOHDaq0s5z61U7F5t8aoXMTqUcVeHtV64BT799glxIXj1vzKq2kxu6sQE', 
+        'Content-Type': 'application/json'
+      },
+      data : data
+    };
+    
+    axios.request(config)
+    .then((response) => {
+      console.log(JSON.stringify(response.data));
     })
-    .then(response => {
-      console.log(response.data);
-      setProcess(false);
-    }).catch((err)=>{
-      setProcess(false);
+    .catch((error) => {
+      console.log(error);
     });
   }
   useEffect(() => {
