@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { speciesList } from "../constant/species";
 export default function Thankyou() {
@@ -9,32 +9,32 @@ export default function Thankyou() {
   const [error, setError] = useState(false);
   const [process, setProcess] = useState(false);
   const handleSubmit=async()=>{
-    console.log("form")
-    if(namedata=="" || lastname=="" || email==""){
-      setError(true);
-      return;
-    }else{
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      const spec = urlParams.get("name");
-      const speciesName:any = speciesList.data.find((obj) => obj.name === spec);
-      setProcess(true);
-      setError(false);
-      const formdata= new FormData();
-      formdata.append('NAME',namedata)
-      formdata.append('LAST NAME',lastname)
-      formdata.append('EMAIL',email)
-      formdata.append('PLEDGE',speciesName?.pledge_line)
-      await axios.post('https://sheet.best/api/sheets/c5f8fa4d-7c21-4c76-88f3-61450c01bda2', formdata)
-      .then(response => {
-        console.log(response);
-        setProcess(false);
-      }).catch((err)=>{
-        setProcess(false);
-      });
-      window.location.href = "/success";
-    }
+    var data = JSON.stringify({
+      "collection": "users",
+      "database": "sample_mflix",
+      "dataSource": "Cluster0",
+      "projection": {
+          "_id": 1
+      }
+  });
+   await axios.post('https://ap-south-1.aws.data.mongodb-api.com/app/data-raxlfyz/endpoint/data/v1/action/findOne', data,{
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Request-Headers': '*',
+        'api-key': 'zxteh5xGOHDaq0s5z61U7F5t8aoXMTqUcVeHtV64BT799glxIXj1vzKq2kxu6sQE',
+      }
+    })
+    .then(response => {
+      console.log(response.data);
+      setProcess(false);
+    }).catch((err)=>{
+      setProcess(false);
+    });
   }
+  useEffect(() => {
+    handleSubmit();
+  }, [])
+  
   return (
     <div
       className="background"
