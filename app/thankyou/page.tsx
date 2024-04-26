@@ -21,6 +21,7 @@ export default function Thankyou() {
       headers: {
         'Content-Type': 'application/json',
         'Access-Control-Request-Headers': '*',
+        'Authorization':'zxteh5xGOHDaq0s5z61U7F5t8aoXMTqUcVeHtV64BT799glxIXj1vzKq2kxu6sQE',
         'api-key': 'zxteh5xGOHDaq0s5z61U7F5t8aoXMTqUcVeHtV64BT799glxIXj1vzKq2kxu6sQE',
       }
     })
