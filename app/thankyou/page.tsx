@@ -14,14 +14,14 @@ export default function Thankyou() {
       "database": "sample_mflix",
       "dataSource": "Cluster0",
       "document": {
-        "text": "Hello, world!"
+        "name": "RUSHABH",
+        "email":"rohit123w@gmail.com"
       }
     });
-    
     let config = {
       method: 'post',
       maxBodyLength: Infinity,
-      url: 'https://data.mongodb-api.com/app/data-raxlfyz/endpoint/data/v1/action/insertOne',
+      url: 'https://ap-south-1.aws.data.mongodb-api.com/app/data-raxlfyz/endpoint/data/v1/action/insertOne',
       headers: { 
         'api-key': 'zxteh5xGOHDaq0s5z61U7F5t8aoXMTqUcVeHtV64BT799glxIXj1vzKq2kxu6sQE', 
         'Content-Type': 'application/json'
