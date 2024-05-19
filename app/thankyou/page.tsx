@@ -14,8 +14,9 @@ export default function Thankyou() {
       "database": "sample_mflix",
       "dataSource": "Cluster0",
       "document": {
-        "name": "RUSHABH",
-        "email":"rohit123w@gmail.com"
+        "first name": namedata,
+        "last name": lastname,
+        "email":email
       }
     });
     let config = {
@@ -37,9 +38,6 @@ export default function Thankyou() {
       console.log(error);
     });
   }
-  useEffect(() => {
-    handleSubmit();
-  }, [])
   
   return (
     <div

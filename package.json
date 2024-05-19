@@ -1,5 +1,6 @@
 {
   "name": "nextjs",
+  "proxy": "https://finsbury.vercel.app/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
