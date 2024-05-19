@@ -13,15 +13,15 @@ export default function Thankyou() {
       "collection": "users",
       "database": "sample_mflix",
       "dataSource": "Cluster0",
-      "projection": {
-        "_id": 1
+      "document": {
+        "text": "Hello, world!"
       }
     });
     
     let config = {
       method: 'post',
       maxBodyLength: Infinity,
-      url: 'https://ap-south-1.aws.data.mongodb-api.com/app/data-raxlfyz/endpoint/data/v1/action/findOne',
+      url: 'https://data.mongodb-api.com/app/data-raxlfyz/endpoint/data/v1/action/insertOne',
       headers: { 
         'api-key': 'zxteh5xGOHDaq0s5z61U7F5t8aoXMTqUcVeHtV64BT799glxIXj1vzKq2kxu6sQE', 
         'Content-Type': 'application/json'
