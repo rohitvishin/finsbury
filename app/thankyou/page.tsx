@@ -7,37 +7,29 @@ export default function Thankyou() {
   const [lastname, setLastname] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [error, setError] = useState(false);
+  const [message, setMessage] = useState<any>('');
   const [process, setProcess] = useState(false);
-  const handleSubmit=async()=>{
-    let data = JSON.stringify({
-      "collection": "users",
-      "database": "sample_mflix",
-      "dataSource": "Cluster0",
-      "document": {
-        "first name": namedata,
-        "last name": lastname,
-        "email":email
+  const handleSubmit = async (e:any) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/api/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({firstname:namedata,lastname:lastname,email:email}),
+      });
+      const data = await response.json();
+      if (data.success) {
+        window.location.href = "/success";
+      } else {
+        setMessage(data.error);
+        setError(true);
       }
-    });
-    let config = {
-      method: 'post',
-      maxBodyLength: Infinity,
-      url: 'https://ap-south-1.aws.data.mongodb-api.com/app/data-raxlfyz/endpoint/data/v1/action/insertOne',
-      headers: { 
-        'api-key': 'zxteh5xGOHDaq0s5z61U7F5t8aoXMTqUcVeHtV64BT799glxIXj1vzKq2kxu6sQE', 
-        'Content-Type': 'application/json'
-      },
-      data : data
-    };
-    
-    axios.request(config)
-    .then((response) => {
-      console.log(JSON.stringify(response.data));
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  }
+    } catch (error) {
+      setMessage(error);
+    }
+  };
   
   return (
     <div
@@ -62,7 +54,7 @@ export default function Thankyou() {
       <div className="button-container">
         {
           error && (
-            <p style={{color:'red'}}>All fields are mendatory</p>
+            <p style={{color:'red'}}>{message}</p>
           )
         }
         <button
