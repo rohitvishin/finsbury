@@ -1,7 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { speciesList } from "../constant/species";
 export default function Thankyou() {
   const [namedata, setname] = useState<string>("");
   const [lastname, setLastname] = useState<string>("");
@@ -11,6 +9,7 @@ export default function Thankyou() {
   const [process, setProcess] = useState(false);
   const handleSubmit = async (e:any) => {
     e.preventDefault();
+    setProcess(true);
     try {
       const response = await fetch('/api/', {
         method: 'POST',
@@ -29,6 +28,7 @@ export default function Thankyou() {
     } catch (error) {
       setMessage(error);
     }
+    setProcess(false);
   };
   
   return (
