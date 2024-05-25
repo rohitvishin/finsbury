@@ -37,7 +37,7 @@ export default function Success() {
   const handleShareClick = () => {
     const shareData = {
       title: "Check out this app!",
-      text: "Share the app with a friend",
+      text: "I found this app really amazing and thought you might like it too. Check it out!",
       url: window.location.origin, // Main domain
     };
 
