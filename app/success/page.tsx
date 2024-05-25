@@ -34,6 +34,21 @@ export default function Success() {
     }
   };
 
+  const handleShareClick = () => {
+    const shareData = {
+      title: "Check out this app!",
+      text: "Share the app with a friend",
+      url: window.location.origin, // Main domain
+    };
+
+    if (navigator.share) {
+      navigator.share(shareData).catch((error) => console.log("Error sharing:", error));
+    } else {
+      // Fallback for browsers that do not support the Web Share API
+      const shareUrl = `${window.location.origin}`;
+      window.open(`mailto:?subject=${shareData.title}&body=${shareData.text} ${shareUrl}`, '_blank');
+    }
+  };
 
   return (
     <div>
@@ -100,6 +115,7 @@ export default function Success() {
           width: "100%",
           color: "#fff",
         }}
+        onClick={handleShareClick}
       >
         Share the app with a friend
       </p>
