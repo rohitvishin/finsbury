@@ -17,7 +17,11 @@ export default function Camera() {
   const [randomSpecies, setRandomSpecies] = useState(false);
   const [species, setSpecies] = useState(null);
   const [clickIcon, setClickIcon] = useState(false);
-  const [value, setValue] = useStore([]);
+  const { value, setValue } = useStore((state) => ({
+    value: state.value,
+    setValue: state.setValue,
+  }));
+
   useEffect(() => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
