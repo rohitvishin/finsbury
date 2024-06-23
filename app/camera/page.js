@@ -17,10 +17,8 @@ export default function Camera() {
   const [randomSpecies, setRandomSpecies] = useState(false);
   const [species, setSpecies] = useState(null);
   const [clickIcon, setClickIcon] = useState(false);
-  const { value, setValue } = useStore((state) => ({
-    value: state.value,
-    setValue: state.setValue,
-  }));
+  const value = useStore((state) => state.value);
+  const setValue = useStore((state) => state.setValue);
 
   useEffect(() => {
     const queryString = window.location.search;
@@ -35,7 +33,7 @@ export default function Camera() {
       console.log(randomSpecie)
     }
     if (spec_id !== 0) {
-      setValue(prevValue => [...prevValue, spec_id]);
+      setValue(prevValue => [...new Set([...prevValue, spec_id])]); // Append new ID, avoid duplicates
     }
     console.log('inside camera')
   }, []);
