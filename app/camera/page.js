@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import "../camera.css";
 import { speciesList } from "../constant/species";
 import { useRouter } from "next/navigation";
-
+import useStore from '../store/useStore';
 export default function Camera() {
   const router = useRouter();
   const videoRef = useRef(null);
@@ -17,14 +17,23 @@ export default function Camera() {
   const [randomSpecies, setRandomSpecies] = useState(false);
   const [species, setSpecies] = useState(null);
   const [clickIcon, setClickIcon] = useState(false);
-
+  const { value, setValue } = useStore();
   useEffect(() => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const spec = urlParams.get("spe_id") ? parseInt(urlParams.get("spe_id")) : 0;
-    const species_id=spec>=6?0:spec; // reset to 0 after 7
-    const randomSpecie = speciesList.data.find((obj) => obj.id === (species_id+1));
-    setSpecies(randomSpecie);
+    const spec_id = urlParams.get("spe_id") ? parseInt(urlParams.get("spe_id")):0;
+    const idsToAvoid = spec_id !== 0 ? [...value, spec_id] : value;
+    const filteredSpeciesList = speciesList.data.filter(species => !idsToAvoid.includes(species.id));
+    if(filteredSpeciesList.length>0){
+      const randomIndex = Math.floor(Math.random() * filteredSpeciesList.length);
+      const randomSpecie = filteredSpeciesList.data[randomIndex];
+      setSpecies(randomSpecie);
+      console.log(randomSpecie)
+    }
+    if (spec_id !== 0) {
+      setValue(prevValue => [...prevValue, spec_id]);
+    }
+    console.log('inside camera')
   }, []);
 
   const startCamera = async () => {
