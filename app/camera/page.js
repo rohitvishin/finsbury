@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import "../camera.css";
 import { speciesList } from "../constant/species";
 import { useRouter } from "next/navigation";
-import useStore from '../lib/useStore';
+import { useStore } from '../../lib/useStore'
 export default function Camera() {
   const router = useRouter();
   const videoRef = useRef(null);
