@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import "../camera.css";
 import { speciesList } from "../constant/species";
 import { useRouter } from "next/navigation";
-import { useStore } from '../../lib/useStore'
+import { useAppContext } from "@/context";
 export default function Camera() {
   const router = useRouter();
   const videoRef = useRef(null);
@@ -17,25 +17,19 @@ export default function Camera() {
   const [randomSpecies, setRandomSpecies] = useState(false);
   const [species, setSpecies] = useState(null);
   const [clickIcon, setClickIcon] = useState(false);
-  const value = useStore((state) => state.value);
-  const setValue = useStore((state) => state.setValue);
-
+  const {speciesArr,setSpeciesArr}=useAppContext();
   useEffect(() => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const spec_id = urlParams.get("spe_id") ? parseInt(urlParams.get("spe_id")):0;
-    const idsToAvoid = spec_id !== 0 ? [...value, spec_id] : value;
-    const filteredSpeciesList = speciesList.data.filter(species => !idsToAvoid.includes(species.id));
-    if(filteredSpeciesList.length>0){
-      const randomIndex = Math.floor(Math.random() * filteredSpeciesList.length);
-      const randomSpecie = filteredSpeciesList.data[randomIndex];
-      setSpecies(randomSpecie);
-      console.log(randomSpecie)
-    }
-    if (spec_id !== 0) {
-      setValue(prevValue => [...new Set([...prevValue, spec_id])]); // Append new ID, avoid duplicates
-    }
-    console.log('inside camera')
+    const spec = urlParams.get("spe_id") ? parseInt(urlParams.get("spe_id")) : 0;
+    console.log(spec)
+    setSpeciesArr(spec);
+    const excludeSpecies = [...speciesArr, spec];
+    const availableSpecies = speciesList.data.filter((obj) => !excludeSpecies.includes(obj.id));
+    const randomSpecie = availableSpecies.length > 0
+    ? availableSpecies[Math.floor(Math.random() * availableSpecies.length)]
+    : null;
+    setSpecies(randomSpecie);
   }, []);
 
   const startCamera = async () => {
