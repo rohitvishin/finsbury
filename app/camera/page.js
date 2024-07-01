@@ -23,9 +23,13 @@ export default function Camera() {
     const urlParams = new URLSearchParams(queryString);
     const spec = urlParams.get("spe_id") ? parseInt(urlParams.get("spe_id")) : 0;
     console.log(spec)
-    setSpeciesArr(spec);
+    setSpeciesArr([...speciesArr,spec]);
     const excludeSpecies = [...speciesArr, spec];
-    const availableSpecies = speciesList.data.filter((obj) => !excludeSpecies.includes(obj.id));
+    var availableSpecies = speciesList.data.filter((obj) => !excludeSpecies.includes(obj.id));
+    if (availableSpecies.length === 0) {
+        setSpeciesArr([]);  // Reset the state
+        availableSpecies = speciesList.data;
+    }
     const randomSpecie = availableSpecies.length > 0
     ? availableSpecies[Math.floor(Math.random() * availableSpecies.length)]
     : null;
