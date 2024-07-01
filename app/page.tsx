@@ -31,7 +31,7 @@ export default function Landing() {
       return (
         <div
           style={{
-            backgroundImage: 'url("finsbury/BG.png")',
+            backgroundImage: 'url("finsbury/BG_V2.png")',
             backgroundSize: "cover",
             backgroundPosition: "center",
             height: "100vh",
